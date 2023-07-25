@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container__info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  &__title {
+    font-size: 1.687rem;
+    font-weight: 400;
+    line-height: 2.75rem;
+    margin: 0;
+  }
+}
+
+.separator {
+  border: 1px solid #ddd;
+  margin: 0.2rem 0;
+}

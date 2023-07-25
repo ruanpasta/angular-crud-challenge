@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClientListComponent } from './client-list/client-list.component';
-import { ClientFormComponent } from './client-form/client-form.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { ClientListComponent } from './features/client-list/client-list.component';
+import { ClientFormComponent } from './features/client-form/client-form.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
 const routes: Routes = [
   {

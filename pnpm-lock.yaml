@@ -1721,7 +1721,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/code-frame': 7.22.5
-      '@babel/generator': 7.22.7
+      '@babel/generator': 7.22.9
       '@babel/helper-environment-visitor': 7.22.5
       '@babel/helper-function-name': 7.22.5
       '@babel/helper-hoist-variables': 7.22.5
@@ -2062,7 +2062,7 @@ packages:
     resolution: {integrity: sha512-7kZUAaLscfgbwBQRbvdMYaZOWyMEcPTH/tJjnyAWJ/dvvs9Ef+CERx/qJb9GExJpl1qipaDGn7KqHnFGGixd0w==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /@npmcli/git@4.1.0:
@@ -2075,7 +2075,7 @@ packages:
       proc-log: 3.0.0
       promise-inflight: 1.0.1
       promise-retry: 2.0.1
-      semver: 7.5.3
+      semver: 7.5.4
       which: 3.0.1
     transitivePeerDependencies:
       - bluebird
@@ -2858,7 +2858,7 @@ packages:
   /builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /bytes@3.0.0:
@@ -5042,7 +5042,7 @@ packages:
       nopt: 6.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
-      semver: 7.5.3
+      semver: 7.5.4
       tar: 6.1.15
       which: 2.0.2
     transitivePeerDependencies:
@@ -5067,7 +5067,7 @@ packages:
     dependencies:
       hosted-git-info: 6.1.1
       is-core-module: 2.12.1
-      semver: 7.5.3
+      semver: 7.5.4
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -5092,7 +5092,7 @@ packages:
     resolution: {integrity: sha512-dH3GmQL4vsPtld59cOn8uY0iOqRmqKvV+DLGwNXV/Q7MDgD2QfOADWd/mFXcIE5LVhYYGjA3baz6W9JneqnuCw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /npm-normalize-package-bin@3.0.1:

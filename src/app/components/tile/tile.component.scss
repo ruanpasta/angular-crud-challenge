@@ -1,0 +1,68 @@
+@import '../../../styles/styles.scss';
+
+.container {
+  background-color: $white;
+  padding: 0.875rem;
+  margin-top: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__name {
+    font-size: 1.125rem;
+  }
+
+  &__cnpj {
+    font-size: 0.75rem;
+  }
+}
+
+@mixin container($gap: 0) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+.container__secondgroup {
+  @include container(8rem);
+}
+
+.container__firstgroup {
+  @include container(0.5rem);
+}
+
+.container__status {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &__ball {
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    border-radius: 100%;
+    background-color: $green-500;
+
+    &--inactive {
+      background-color: $red-500;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    gap: 0.875rem;
+
+  }
+
+  .container__secondgroup, .container__firstgroup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.875rem;
+  }
+}

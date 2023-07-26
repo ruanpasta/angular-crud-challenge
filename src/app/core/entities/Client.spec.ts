@@ -5,7 +5,6 @@ describe('Client', () => {
   let client: Client;
 
   beforeEach(() => {
-    // Create a new instance of the Client class before each test
     client = new Client('Test Client', '123456789');
   });
 

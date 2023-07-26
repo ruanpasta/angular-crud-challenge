@@ -18,4 +18,13 @@ describe('NavbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render the Drugovich logo with alt text and correct src', () => {
+    const logoImg = fixture.nativeElement.querySelector('img');
+
+    expect(logoImg).toBeTruthy();
+    expect(logoImg.getAttribute('alt')).toBe('Drugovich logo');
+    expect(logoImg.getAttribute('src')).toContain('assets/drugovich-logo.png');
+  });
+
 });

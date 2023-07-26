@@ -18,7 +18,29 @@
   }
 }
 
+.container__button {
+  margin-right: 0.875rem;
+}
+
 .separator {
   border: 1px solid #ddd;
   margin: 0.2rem 0;
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .container__button {
+    margin-right: 0;
+    margin-bottom: 0.2rem;
+  }
+
+  .container__info {
+    flex-direction: column;
+  }
 }

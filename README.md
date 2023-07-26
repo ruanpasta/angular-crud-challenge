@@ -1,27 +1,54 @@
 # DrugovichChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+Esse projeto foi desenvolvido para atender ao desafio da Drugovich.
+Nao foi utilizado nenhuma biblioteca de componentes. Todos os componentes foram criados aqui.
 
-## Development server
+#### Estrutura do projeto:
+```bash
+| App             Arquivos da aplicacao
+| - Components         Componentes de negocio ou do design system
+| - Core               Entidaes e tipagens
+| - Features           Tela/Listagem/Fomulario
+| - Services           Servico da applicacao
+| - Shared             Compartilhamento de componentes comuns
+| - Store              Gerenciamento de estado global dos Clientes
+| Assets          Logo da aplicacao
+| Styles          Estilos globais e variaveis
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
-## Code scaffolding
+## Rodando o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Instale as dependencias com um gerenciador de pacotes de sua preferencia:
+```bash
+npm install
+pnpm install
+yarn
+```
+
+Use o comando `ng serve` para rodar o ambiente de desenvolvimento.
+Ou se preferir pode usar um dos comandos pre-configurados:
+```bash
+npm start
+pnpm start
+yarn start
+```
+
+Apos startar o projeto, acesse `http://localhost:4200/` para ver a aplicacao rodando.
+
+## Rodando os Testes
+
+Foram realizados diversos testes unitarios no projeto.
+
+Use o comando `ng test` para rodar os testes.
+Ou use um dos comandos pre-configurados:
+```bash
+npm test
+pnpm test
+yarn test
+```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Gere uma nova versao do projeto para producao com `ng build`. Voce pode acessar a pasta `dist/` para ver a versao final.

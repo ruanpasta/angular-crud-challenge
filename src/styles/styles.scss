@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 /* styles.scss ou styles.css */
 @import '~@fortawesome/fontawesome-free/css/all.css';
+@import './colors.scss';
 
 body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Monda', sans-serif;
-  background-color: #F6F6F6;
+  background-color: $gray-100;
 }

@@ -8,10 +8,16 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'client'
+    redirectTo: 'client',
   },
   { path: 'client', component: ClientListComponent },
-  { path: 'client/:id', component: ClientFormComponent },
+  {
+    path: 'client/:id',
+    loadComponent: () =>
+      import('../app/features/client-form/client-form.component').then(
+        (m) => m.ClientFormComponent
+      ),
+  },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404', pathMatch: 'full' },
 ];

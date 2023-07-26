@@ -1,0 +1,5 @@
+<div class="toaster-container" [ngClass]="currentType" *ngIf="notifications.length > 0">
+  <div class="toaster" *ngFor="let notification of notifications">
+    {{ notification.message }}
+  </div>
+</div>

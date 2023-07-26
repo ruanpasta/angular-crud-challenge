@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="container__firstgroup">
+    <span class="container__name">
+      {{ name }}
+    </span>
+    <span class="container__cnpj">
+      {{ cnpj }}
+    </span>
+  </div>
+
+  <div class="container__secondgroup">
+    <span class="container__status">
+      <div class="container__status__ball" [ngClass]="{'container__status__ball--inactive': !isActive() }"></div>
+      {{ status }}
+    </span>
+    <app-button
+      label="Editar"
+      variation="warning"
+      (onClick)="onEdit.emit($event)"
+    ></app-button>
+  </div>
+</div>

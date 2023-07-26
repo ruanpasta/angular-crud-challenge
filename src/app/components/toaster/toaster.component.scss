@@ -1,0 +1,24 @@
+@import '../../../styles/styles.scss';
+
+.toaster-container {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  color: $white;
+  background-color: $green-500;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  transition: all 1s ease-in;
+}
+
+.success {
+  background-color: $green-500;
+}
+
+.info {
+  background-color: $blue-500;
+}
+
+.danger {
+  background-color: $red-500;
+}

@@ -1,9 +1,11 @@
 <div class="container">
   <div class="container__info">
-    <ng-content select="[icon]" />
+    <ng-content select="[previousSlot]" />
     <h2 class="container__info__title">{{ title }}</h2>
   </div>
-  <ng-content select="[button]" />
+  <div class="container__button">
+    <ng-content select="[afterSlot]" />
+  </div>
 </div>
 
 <div class="separator"></div>

@@ -1,18 +1,28 @@
 import { Status } from "../types/status.enum"
+import { v4 as uuidV4 } from 'uuid';
+
 
 export default class Client {
-  constructor(private name: string, private cnpj: string, private status: Status = Status.Ativo) {}
+  private id;
+
+  constructor(private name: string, private cnpj: string, private status: Status = Status.Ativo) {
+    this.id = uuidV4();
+  }
+
+  getId(): string {
+    return this.id;
+  }
 
   getName(): string {
-    return this.name
+    return this.name;
   }
 
   getCNPJ(): string {
-    return this.cnpj
+    return this.cnpj;
   }
 
   getStatus(): Status {
-    return this.status
+    return this.status;
   }
 
   changeStatus() {

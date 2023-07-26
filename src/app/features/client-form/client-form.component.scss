@@ -1,0 +1,39 @@
+@import '../../../styles/styles.scss';
+
+.form-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 20rem;
+
+  &__buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: end;
+  }
+}
+
+.form-container__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.225rem;
+
+  label {
+    font-size: 0.9375rem;
+  }
+
+  input {
+    border: 1px solid $gray-300;
+    padding: 0.75rem;
+  }
+
+  select {
+    border: 1px solid $gray-300;
+    padding: 0.75rem;
+  }
+
+  small {
+    color: $red-500;
+  }
+}

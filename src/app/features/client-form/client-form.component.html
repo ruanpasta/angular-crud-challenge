@@ -1,1 +1,65 @@
-<p>client-form works!</p>
+<app-page-header title="Novo cliente">
+  <i previousSlot class="fa-regular fa-user fa-lg"></i>
+</app-page-header>
+
+<form [formGroup]="companyForm" class="form-container" (ngSubmit)="onSubmit()">
+  <div class="form-container__input">
+    <label for="name">Nome</label>
+    <input type="text" id="name" formControlName="name" />
+    <div
+      *ngIf="
+        companyForm.controls['name'].invalid &&
+        (companyForm.controls['name'].dirty ||
+          companyForm.controls['name'].touched)
+      "
+    >
+      <small *ngIf="companyForm.controls['name'].errors?.['required']"
+        >Campo obrigatório.</small
+      >
+    </div>
+  </div>
+
+  <div class="form-container__input">
+    <label for="cnpj">CNPJ</label>
+    <input type="text" id="cnpj" formControlName="cnpj" />
+    <div
+      *ngIf="
+        companyForm.controls['cnpj'].invalid &&
+        (companyForm.controls['cnpj'].dirty ||
+          companyForm.controls['cnpj'].touched)
+      "
+    >
+      <small *ngIf="companyForm.controls['cnpj'].errors?.['required']"
+        >Campo obrigatório.</small
+      >
+      <small *ngIf="companyForm.controls['cnpj'].errors?.['pattern']"
+        >CNPJ inválido (deve conter 14 dígitos numéricos).</small
+      >
+    </div>
+  </div>
+
+  <div class="form-container__input">
+    <label for="status">Status</label>
+    <select id="status" formControlName="status">
+      <option value="" disabled selected>Selecione o status</option>
+      <option value="Ativo">Ativo</option>
+      <option value="Inativo">Inativo</option>
+    </select>
+    <div
+      *ngIf="
+        companyForm.controls['status'].invalid &&
+        (companyForm.controls['status'].dirty ||
+          companyForm.controls['status'].touched)
+      "
+    >
+      <small *ngIf="companyForm.controls['status'].errors?.['required']"
+        >Campo obrigatório.</small
+      >
+    </div>
+  </div>
+
+  <div class="form-container__buttons">
+    <app-button type="submit" variation="link" label="Cancelar" (onClick)="goBack()" />
+    <app-button type="submit" variation="secondary" label="Salvar" [disabled]="companyForm.invalid" />
+  </div>
+</form>

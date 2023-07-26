@@ -1,6 +1,25 @@
 <app-page-header title="Listagem de Clientes">
-  <i icon class="fa-regular fa-user fa-lg"></i>
-  <button button type="button">New</button>
+  <i previousSlot class="fa-regular fa-user fa-lg"></i>
+  <app-button
+    afterSlot
+    label="Novo"
+    variation="primary"
+    icon="fa-solid fa-plus"
+    (onClick)="handleClientClick()"
+  ></app-button>
 </app-page-header>
 
-<p>client-list works!</p>
+<main class="tiles-container" *ngIf="clients$">
+  <div *ngFor="let client of clients$ | async">
+    <app-tile
+      [name]="client.getName()"
+      [cnpj]="client.getCNPJ()"
+      [status]="client.getStatus()"
+      (onEdit)="handleClientClick(client)"
+    />
+  </div>
+</main>
+
+<div class="pager">
+  Exibindo {{ clientsLength$ | async }} de {{ clientsLength$ | async  }} clientes
+</div>

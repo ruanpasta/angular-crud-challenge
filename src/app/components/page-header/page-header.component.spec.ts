@@ -29,14 +29,14 @@ describe('PageHeaderComponent', () => {
     expect(titleElement.textContent).toContain(title);
   });
 
-  it('should render the icon and button', () => {
+  it('should render the previousSlot and afterSlot', () => {
     const title = 'My Page';
 
     // Create Icon and Button to use in ngContents
     const iconElement = document.createElement('i');
-    iconElement.setAttribute('icon', ''); // Add Icon Attribute
+    iconElement.setAttribute('previousSlot', ''); // Add Icon Attribute
     const buttonElement = document.createElement('button');
-    buttonElement.setAttribute('button', ''); // Add Button attribute
+    buttonElement.setAttribute('afterSlot', ''); // Add Button attribute
 
     // Update PageHeader element with properties and contents
     component.title = title;

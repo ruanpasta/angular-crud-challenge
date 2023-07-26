@@ -1,7 +1,10 @@
 # DrugovichChallenge
 
 Esse projeto foi desenvolvido para atender ao desafio da Drugovich.
-Nao foi utilizado nenhuma biblioteca de componentes. Todos os componentes foram criados aqui.
+Nao foi utilizado nenhuma biblioteca de componentes.
+Todos os componentes foram criados aqui.
+
+Voce pode acessar uma versao de producao desta aplicacao em [drugovich.ruanpasta.com](https://drugovich.ruanpasta.com/).
 
 #### Estrutura do projeto:
 ```bash

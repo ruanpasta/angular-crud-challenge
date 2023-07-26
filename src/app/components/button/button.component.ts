@@ -14,6 +14,7 @@ export class ButtonComponent {
   @Input() variation: ButtonVariations = 'warning';
   @Input() icon: string | undefined
   @Input() disabled: boolean = false
+  @Input() type: string = 'button'
 
   @Output() onClick: EventEmitter<MouseEvent> = new EventEmitter();
 

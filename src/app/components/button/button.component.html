@@ -1,4 +1,10 @@
-<button [ngClass]="variation" class="container" (click)="onClick.emit($event)" [disabled]="disabled">
+<button
+  [ngClass]="variation"
+  class="container"
+  [type]="type"
+  (click)="onClick.emit($event)"
+  [disabled]="disabled"
+>
   <span *ngIf="icon">
     <i [class]="icon"></i>
   </span>

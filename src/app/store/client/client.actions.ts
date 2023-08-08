@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import Client from '../core/entities/Client';
+import Client from '../../core/entities/Client';
 
 export const addClient = createAction(
   '[Client] Add',
@@ -15,3 +15,9 @@ export const deleteClient = createAction(
   '[Client] Delete',
   props<{ clientId: string }>(),
 );
+
+export const changeClientLoad = createAction(
+  '[Client] Load',
+  props<{ isLoaded: boolean }>(),
+);
+

@@ -9,8 +9,8 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
 import Client from 'src/app/core/entities/Client';
 import { Store, select } from '@ngrx/store';
-import { ClientState } from 'src/app/store/client.state';
-import { addClient, updateClient } from 'src/app/store/client.actions';
+import { ClientState } from 'src/app/store/client/client.state';
+import { addClient, updateClient } from 'src/app/store/client/client.actions';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToasterService } from 'src/app/services/toaster/toaster.service';
 

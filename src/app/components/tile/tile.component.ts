@@ -15,6 +15,7 @@ export class TileComponent {
   @Input() cnpj = '';
   @Input() status: Status = Status.Inativo;
   @Output() onEdit: EventEmitter<MouseEvent> = new EventEmitter();
+  @Output() onRemove: EventEmitter<MouseEvent> = new EventEmitter();
 
   isActive() {
     return this.status === Status.Ativo

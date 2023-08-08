@@ -5,8 +5,8 @@ import Client from 'src/app/core/entities/Client';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { addClient } from 'src/app/store/client.actions';
-import { ClientState } from 'src/app/store/client.state';
+import { addClient, changeClientLoad, deleteClient } from 'src/app/store/client/client.actions';
+import { ClientState } from 'src/app/store/client/client.state';
 import { map } from 'rxjs';
 import { ClientService } from 'src/app/services/client/client.service';
 import { ToasterService } from 'src/app/services/toaster/toaster.service';
@@ -21,6 +21,8 @@ import { ToasterService } from 'src/app/services/toaster/toaster.service';
 export class ClientListComponent implements OnInit {
   clients$: Observable<Client[]>;
   clientsLength$: Observable<number>;
+  clientsLoaded$: Observable<boolean | undefined>
+  isLoaded: boolean | undefined = false
 
   constructor(
     private clientService: ClientService,
@@ -32,17 +34,27 @@ export class ClientListComponent implements OnInit {
     this.clientsLength$ = this.store
       .select('client')
       .pipe(map((c) => c.clients.length));
+    this.clientsLoaded$ = this.store.select('client').pipe(map(c => c.isLoaded))
   }
 
   ngOnInit(): void {
+    this.clientsLoaded$.subscribe(isLoaded => this.isLoaded = isLoaded)
     this.clientsLength$.subscribe(length => {
-      if (length === 0) return this.getClientsFromApi()
+      if (length === 0 && !this.isLoaded) {
+        this.store.dispatch(changeClientLoad({ isLoaded: true }))
+        return this.getClientsFromApi()
+      }
     })
   }
 
-  handleClientClick(client?: Client) {
+  handleClientEditClick(client?: Client) {
     const path = client ? client.getId() : 'new';
     this.router.navigate([`/client/${path}`]);
+    console.log('Edit:')
+  }
+
+  handleClientRemoveClick(client?: Client) {
+    this.store.dispatch(deleteClient({ clientId: client!.getId() }))
   }
 
   private getClientsFromApi(): void {

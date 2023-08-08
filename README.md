@@ -1,10 +1,19 @@
-# DrugovichChallenge
+# Angular Crud Challenge
 
-Esse projeto foi desenvolvido para atender ao desafio da Drugovich.
-Nao foi utilizado nenhuma biblioteca de componentes.
-Todos os componentes foram criados aqui.
+Esse projeto foi desenvolvido para atender a um desafio durante um 1 dia.\
+Nao foi utilizado nenhuma biblioteca de componentes.Todos os componentes foram criados aqui.
 
-Voce pode acessar uma versao de producao desta aplicacao em [drugovich.ruanpasta.com](https://drugovich.ruanpasta.com/).
+Nesse projeto temos um CRUD. Listamos os clientes buscando de uma API externa. Podemos criar um novo cliente, editar e remover os existentes.
+
+As principais technologias utilizadas nesse projeto foram:\
+<img src="https://img.shields.io/badge/Angular-%23cf173f?logo=Angular"/>
+<img src="https://img.shields.io/badge/NgRx-%23d36be8?logo=ngrx"/>
+<img src="https://img.shields.io/badge/Jasmine-%23801296?logo=jasmine"/>
+<img src="https://img.shields.io/badge/Karma-%23199612"/>
+<img src="https://img.shields.io/badge/Sass-edc5e1?logo=sass&logoColor=b04d91"/>
+
+**Acesse o porjeto em producao:**\
+https://angular-crud-challenge.ruanpasta.com/
 
 #### Estrutura do projeto:
 ```bash

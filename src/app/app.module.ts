@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
-import { clientReducer } from './store/client.reducer';
+import { clientReducer } from './store/client/client.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ToasterComponent } from './components/toaster/toaster.component';
 import { ToasterService } from './services/toaster/toaster.service';

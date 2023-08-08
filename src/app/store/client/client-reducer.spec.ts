@@ -1,8 +1,8 @@
 import { clientReducer, initialState } from './client.reducer';
 import { addClient, deleteClient, updateClient } from './client.actions';
 import { ClientState } from './client.state';
-import Client from '../core/entities/Client';
-import { Status } from '../core/types/status.enum';
+import Client from '../../core/entities/Client';
+import { Status } from '../../core/types/status.enum';
 
 describe('clientReducer', () => {
   it('should return the initial state', () => {

@@ -1,6 +1,6 @@
 import { addClient, updateClient, deleteClient } from './client.actions';
-import Client from '../core/entities/Client';
-import { Status } from '../core/types/status.enum';
+import Client from '../../core/entities/Client';
+import { Status } from '../../core/types/status.enum';
 
 describe('Client Actions', () => {
   it('should create an AddClient action', () => {

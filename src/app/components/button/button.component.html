@@ -8,5 +8,5 @@
   <span *ngIf="icon">
     <i [class]="icon"></i>
   </span>
-  <span>{{ label }}</span>
+  <span *ngIf="label">{{ label }}</span>
 </button>

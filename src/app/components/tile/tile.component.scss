@@ -15,6 +15,11 @@
   &__cnpj {
     font-size: 0.75rem;
   }
+
+  &__secondgroup__buttons {
+    display: flex;
+    gap: 1rem;
+  }
 }
 
 @mixin container($gap: 0) {

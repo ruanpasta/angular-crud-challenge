@@ -13,10 +13,17 @@
       <div class="container__status__ball" [ngClass]="{'container__status__ball--inactive': !isActive() }"></div>
       {{ status }}
     </span>
-    <app-button
-      label="Editar"
-      variation="warning"
-      (onClick)="onEdit.emit($event)"
-    ></app-button>
+    <div class="container__secondgroup__buttons">
+      <app-button
+        variation="danger"
+        icon="fa-solid fa-trash"
+        (onClick)="onRemove.emit($event)"
+      ></app-button>
+      <app-button
+        label="Editar"
+        variation="warning"
+        (onClick)="onEdit.emit($event)"
+      ></app-button>
+    </div>
   </div>
 </div>

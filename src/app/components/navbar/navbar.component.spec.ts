@@ -19,12 +19,12 @@ describe('NavbarComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render the Drugovich logo with alt text and correct src', () => {
+  it('should render the Crud logo with alt text and correct src', () => {
     const logoImg = fixture.nativeElement.querySelector('img');
 
     expect(logoImg).toBeTruthy();
-    expect(logoImg.getAttribute('alt')).toBe('Drugovich logo');
-    expect(logoImg.getAttribute('src')).toContain('assets/drugovich-logo.png');
+    expect(logoImg.getAttribute('alt')).toBe('Crud logo');
+    expect(logoImg.getAttribute('src')).toContain('assets/crud-logo.png');
   });
 
 });

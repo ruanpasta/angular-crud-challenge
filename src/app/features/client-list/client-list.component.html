@@ -5,7 +5,7 @@
     label="Novo"
     variation="primary"
     icon="fa-solid fa-plus"
-    (onClick)="handleClientClick()"
+    (onClick)="handleClientEditClick()"
   ></app-button>
 </app-page-header>
 
@@ -15,7 +15,8 @@
       [name]="client.getName()"
       [cnpj]="client.getCNPJ()"
       [status]="client.getStatus()"
-      (onEdit)="handleClientClick(client)"
+      (onEdit)="handleClientEditClick(client)"
+      (onRemove)="handleClientRemoveClick(client)"
     />
   </div>
 </main>

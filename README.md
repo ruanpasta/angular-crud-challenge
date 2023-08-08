@@ -28,6 +28,8 @@ https://angular-crud-challenge.ruanpasta.com/
 | Styles          Estilos globais e variaveis
 ```
 
+O layout e design do projeto estao de acordo com a proposta do desafio.
+
 [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
 ## Rodando o projeto
